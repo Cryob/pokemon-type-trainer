@@ -1,1 +1,37 @@
-# CSToolsFinal
+# Pokemon Type Trainer
+
+A small quiz to help you train your knowledge of the Pokemon type chart.
+
+## The Problem
+
+I love Pokemon, but I can never remember all of the type matchups for each type. I wanted an easy way to practice them, so I wrote this program to help people train their knowledge on the type chart.
+
+## How It Works
+
+A paragraph or a few bullets explaining what the software does at a
+high level. If you have a diagram, embed it here:
+
+![System diagram](docs/diagram.png)
+
+## Tech Stack
+
+- **Language:** C#
+
+## Setup
+
+1. Install Visual Studio Community (https://visualstudio.microsoft.com/downloads/) with .NET desktop development workload
+2. Clone the repo with git clone or by downloading straight from github
+3. Click on the "Open a Project or Solution" button and select the .sln file in your repo
+
+## Usage
+
+Build the project by pressing Ctrl + Shift + B and run the executable
+
+## Roadmap
+
+* Other game modes with different types of questions
+* Different difficulty levels for questions and game modes
+
+## Author
+
+Trey Brady, https://github.com/Cryob/
