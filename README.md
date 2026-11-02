@@ -27,7 +27,7 @@ I love Pokemon, but I can never remember all of the type matchups for each type.
 
 ## Usage
 
- Just run the executable in bin/Debug/net10.0/
+ Just run the executable in the folder bin/Debug/net10.0/ in your repo
 
 ## Roadmap
 
