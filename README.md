@@ -23,10 +23,11 @@ I love Pokemon, but I can never remember all of the type matchups for each type.
 1. Install Visual Studio Community (https://visualstudio.microsoft.com/downloads/) with .NET desktop development workload
 2. Clone the repo with git clone or by downloading straight from github
 3. Click on the "Open a Project or Solution" button and select the .sln file in your repo
+4. In Visual Studio, build the project by pressing Ctrl + Shift + B
 
 ## Usage
 
-In Visual Studio, build the project by pressing Ctrl + Shift + B and run the executable
+ Just run the executable in bin/Debug/net10.0/
 
 ## Roadmap
 
