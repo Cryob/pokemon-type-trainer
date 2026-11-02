@@ -11,7 +11,7 @@ I love Pokemon, but I can never remember all of the type matchups for each type.
 A paragraph or a few bullets explaining what the software does at a
 high level. If you have a diagram, embed it here:
 
-![System diagram](docs/FlowchartCST.png)
+![System diagram](<docs/Flowchart CST.png>)
 
 ## Tech Stack
 
