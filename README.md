@@ -25,7 +25,7 @@ high level. If you have a diagram, embed it here:
 
 ## Usage
 
-Build the project by pressing Ctrl + Shift + B and run the executable
+In Visual Studio, build the project by pressing Ctrl + Shift + B and run the executable
 
 ## Roadmap
 
