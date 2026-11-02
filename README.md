@@ -8,8 +8,9 @@ I love Pokemon, but I can never remember all of the type matchups for each type.
 
 ## How It Works
 
-A paragraph or a few bullets explaining what the software does at a
-high level. If you have a diagram, embed it here:
+* Takes user input to start test or end program
+* Generates random questions for the user to answer
+* Prints the score and saves it to a file after a run
 
 ![System diagram](<docs/Flowchart CST.png>)
 
