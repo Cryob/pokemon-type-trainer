@@ -51,6 +51,8 @@
                     Console.WriteLine("3) Steel");
                     Console.WriteLine("4) Ghost");
 
+                    userInput = Console.ReadLine();
+
                     if (userInput != "1" && userInput != "2" && userInput != "3" && userInput != "4")
                     {
                         userInput = "";
@@ -68,15 +70,19 @@
                     Console.WriteLine("Incorrect");
                 }
 
-                Console.ReadLine();
+                Console.ReadKey(true);
 
                 Console.Clear();
                 questionNumber++;
+                userInput = "";
             }
 
             Console.WriteLine("End of Quiz!");
             Console.WriteLine("You scored: " + score + " / 10");
             Console.WriteLine("Click to go back to main menu...");
+
+            Console.ReadKey(true);
+            Console.Clear();
         }
     }
 }
