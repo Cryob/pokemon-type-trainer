@@ -1,4 +1,6 @@
-﻿public class MainClass
+﻿using CSToolsFinal;
+
+public class MainClass
 {
     public static void Main(string[] args)
     {
@@ -84,5 +86,12 @@
             Console.ReadKey(true);
             Console.Clear();
         }
+    }
+
+    public static Question GenerateQuestion()
+    {
+        String questionText = "";
+
+        return new Question();
     }
 }

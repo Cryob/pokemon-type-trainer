@@ -13,6 +13,16 @@ namespace CSToolsFinal
         String choice3;
         String choice4;
 
+        public Question()
+        {
+            this.text = "";
+            this.answer = "";
+            this.choice1 = "";
+            this.choice2 = "";
+            this.choice3 = "";
+            this.choice4 = "";
+        }
+
         public Question(String text, String answer, String c1, String c2, String c3, String c4)
         {
             this.text = text;
