@@ -344,31 +344,302 @@ public class MainClass
         type.SetDefWeaknesses(defWeaknesses);
 
 
-        // Poison
+        // Ground
         type = null;
-        atkStrengths = new PokeType[2];
-        atkWeaknesses = new PokeType[4];
-        defStrengths = new PokeType[5];
-        defWeaknesses = new PokeType[2];
+        atkStrengths = new PokeType[5];
+        atkWeaknesses = new PokeType[2];
+        defStrengths = new PokeType[2];
+        defWeaknesses = new PokeType[3];
 
         allTypes.TryGetValue("Poison", out atkStrengths[0]);
-        allTypes.TryGetValue("Fairy", out atkStrengths[1]);
+        allTypes.TryGetValue("Rock", out atkStrengths[1]);
+        allTypes.TryGetValue("Fire", out atkStrengths[2]);
+        allTypes.TryGetValue("Electric", out atkStrengths[3]);
+        allTypes.TryGetValue("Steel", out atkStrengths[4]);
 
-        allTypes.TryGetValue("Poison", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Bug", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Grass", out atkWeaknesses[1]);
+
+        allTypes.TryGetValue("Poison", out defStrengths[0]);
+        allTypes.TryGetValue("Rock", out defStrengths[1]);
+
+        allTypes.TryGetValue("Water", out defWeaknesses[0]);
+        allTypes.TryGetValue("Grass", out defWeaknesses[1]);
+        allTypes.TryGetValue("Ice", out defWeaknesses[2]);
+
+        allTypes.TryGetValue("Ground", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Rock
+        type = null;
+        atkStrengths = new PokeType[4];
+        atkWeaknesses = new PokeType[3];
+        defStrengths = new PokeType[4];
+        defWeaknesses = new PokeType[5];
+
+        allTypes.TryGetValue("Flying", out atkStrengths[0]);
+        allTypes.TryGetValue("Bug", out atkStrengths[1]);
+        allTypes.TryGetValue("Fire", out atkStrengths[2]);
+        allTypes.TryGetValue("Ice", out atkStrengths[3]);
+
+        allTypes.TryGetValue("Fighting", out atkWeaknesses[0]);
         allTypes.TryGetValue("Ground", out atkWeaknesses[1]);
-        allTypes.TryGetValue("Rock", out atkWeaknesses[2]);
+        allTypes.TryGetValue("Steel", out atkWeaknesses[2]);
+
+        allTypes.TryGetValue("Normal", out defStrengths[0]);
+        allTypes.TryGetValue("Flying", out defStrengths[1]);
+        allTypes.TryGetValue("Poison", out defStrengths[2]);
+        allTypes.TryGetValue("Fire", out defStrengths[3]);
+
+        allTypes.TryGetValue("Fighting", out defWeaknesses[0]);
+        allTypes.TryGetValue("Ground", out defWeaknesses[1]);
+        allTypes.TryGetValue("Water", out defWeaknesses[2]);
+        allTypes.TryGetValue("Grass", out defWeaknesses[3]);
+        allTypes.TryGetValue("Steel", out defWeaknesses[4]);
+
+        allTypes.TryGetValue("Rock", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Bug
+        type = null;
+        atkStrengths = new PokeType[3];
+        atkWeaknesses = new PokeType[7];
+        defStrengths = new PokeType[3];
+        defWeaknesses = new PokeType[3];
+
+        allTypes.TryGetValue("Grass", out atkStrengths[0]);
+        allTypes.TryGetValue("Psychic", out atkStrengths[1]);
+        allTypes.TryGetValue("Dark", out atkStrengths[2]);
+
+        allTypes.TryGetValue("Fighting", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Flying", out atkWeaknesses[1]);
+        allTypes.TryGetValue("Poison", out atkWeaknesses[2]);
         allTypes.TryGetValue("Ghost", out atkWeaknesses[3]);
+        allTypes.TryGetValue("Steel", out atkWeaknesses[4]);
+        allTypes.TryGetValue("Fire", out atkWeaknesses[5]);
+        allTypes.TryGetValue("Fairy", out atkWeaknesses[6]);
 
         allTypes.TryGetValue("Fighting", out defStrengths[0]);
-        allTypes.TryGetValue("Poison", out defStrengths[1]);
+        allTypes.TryGetValue("Ground", out defStrengths[1]);
         allTypes.TryGetValue("Grass", out defStrengths[2]);
+
+        allTypes.TryGetValue("Flying", out defWeaknesses[0]);
+        allTypes.TryGetValue("Rock", out defWeaknesses[1]);
+        allTypes.TryGetValue("Fire", out defWeaknesses[2]);
+
+        allTypes.TryGetValue("Bug", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Ghost
+        type = null;
+        atkStrengths = new PokeType[2];
+        atkWeaknesses = new PokeType[1];
+        defStrengths = new PokeType[2];
+        defWeaknesses = new PokeType[2];
+
+        allTypes.TryGetValue("Ghost", out atkStrengths[0]);
+        allTypes.TryGetValue("Psychic", out atkStrengths[1]);
+
+        allTypes.TryGetValue("Dark", out atkWeaknesses[0]);
+
+        allTypes.TryGetValue("Poison", out defStrengths[0]);
+        allTypes.TryGetValue("Bug", out defStrengths[1]);
+
+        allTypes.TryGetValue("Ghost", out defWeaknesses[0]);
+        allTypes.TryGetValue("Dark", out defWeaknesses[1]);
+
+        allTypes.TryGetValue("Ghost", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Steel
+        type = null;
+        atkStrengths = new PokeType[3];
+        atkWeaknesses = new PokeType[4];
+        defStrengths = new PokeType[10];
+        defWeaknesses = new PokeType[3];
+
+        allTypes.TryGetValue("Rock", out atkStrengths[0]);
+        allTypes.TryGetValue("Ice", out atkStrengths[1]);
+        allTypes.TryGetValue("Fairy", out atkStrengths[2]);
+
+        allTypes.TryGetValue("Steel", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Fire", out atkWeaknesses[1]);
+        allTypes.TryGetValue("Water", out atkWeaknesses[2]);
+        allTypes.TryGetValue("Electric", out atkWeaknesses[3]);
+
+        allTypes.TryGetValue("Normal", out defStrengths[0]);
+        allTypes.TryGetValue("Flying", out defStrengths[1]);
+        allTypes.TryGetValue("Rock", out defStrengths[2]);
         allTypes.TryGetValue("Bug", out defStrengths[3]);
-        allTypes.TryGetValue("Fairy", out defStrengths[4]);
+        allTypes.TryGetValue("Steel", out defStrengths[4]);
+        allTypes.TryGetValue("Grass", out defStrengths[5]);
+        allTypes.TryGetValue("Psychic", out defStrengths[6]);
+        allTypes.TryGetValue("Ice", out defStrengths[7]);
+        allTypes.TryGetValue("Dragon", out defStrengths[8]);
+        allTypes.TryGetValue("Fairy", out defStrengths[9]);
+
+        allTypes.TryGetValue("Fighting", out defWeaknesses[0]);
+        allTypes.TryGetValue("Ground", out defWeaknesses[1]);
+        allTypes.TryGetValue("Fire", out defWeaknesses[2]);
+
+        allTypes.TryGetValue("Steel", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Electric
+        type = null;
+        atkStrengths = new PokeType[2];
+        atkWeaknesses = new PokeType[3];
+        defStrengths = new PokeType[3];
+        defWeaknesses = new PokeType[1];
+
+        allTypes.TryGetValue("Flying", out atkStrengths[0]);
+        allTypes.TryGetValue("Water", out atkStrengths[1]);
+
+        allTypes.TryGetValue("Grass", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Electric", out atkWeaknesses[1]);
+        allTypes.TryGetValue("Dragon", out atkWeaknesses[2]);
+
+        allTypes.TryGetValue("Flying", out defStrengths[0]);
+        allTypes.TryGetValue("Electric", out defStrengths[1]);
+        allTypes.TryGetValue("Steel", out defStrengths[2]);
 
         allTypes.TryGetValue("Ground", out defWeaknesses[0]);
-        allTypes.TryGetValue("Psychic", out defWeaknesses[1]);
 
-        allTypes.TryGetValue("Poison", out type);
+        allTypes.TryGetValue("Electric", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Psychic
+        type = null;
+        atkStrengths = new PokeType[2];
+        atkWeaknesses = new PokeType[2];
+        defStrengths = new PokeType[2];
+        defWeaknesses = new PokeType[3];
+
+        allTypes.TryGetValue("Fighting", out atkStrengths[0]);
+        allTypes.TryGetValue("Poison", out atkStrengths[1]);
+
+        allTypes.TryGetValue("Psychic", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Steel", out atkWeaknesses[1]);
+
+        allTypes.TryGetValue("Fighting", out defStrengths[0]);
+        allTypes.TryGetValue("Psychic", out defStrengths[1]);
+
+        allTypes.TryGetValue("Bug", out defWeaknesses[0]);
+        allTypes.TryGetValue("Ghost", out defWeaknesses[1]);
+        allTypes.TryGetValue("Dark", out defWeaknesses[2]);
+
+        allTypes.TryGetValue("Psychic", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Ice
+        type = null;
+        atkStrengths = new PokeType[4];
+        atkWeaknesses = new PokeType[4];
+        defStrengths = new PokeType[1];
+        defWeaknesses = new PokeType[4];
+
+        allTypes.TryGetValue("Flying", out atkStrengths[0]);
+        allTypes.TryGetValue("Ground", out atkStrengths[1]);
+        allTypes.TryGetValue("Grass", out atkStrengths[2]);
+        allTypes.TryGetValue("Dragon", out atkStrengths[3]);
+
+        allTypes.TryGetValue("Water", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Ice", out atkWeaknesses[1]);
+        allTypes.TryGetValue("Steel", out atkWeaknesses[2]);
+        allTypes.TryGetValue("Fire", out atkWeaknesses[3]);
+
+        allTypes.TryGetValue("Ice", out defStrengths[0]);
+
+        allTypes.TryGetValue("Fighting", out defWeaknesses[0]);
+        allTypes.TryGetValue("Rock", out defWeaknesses[1]);
+        allTypes.TryGetValue("Fire", out defWeaknesses[2]);
+        allTypes.TryGetValue("Steel", out defWeaknesses[3]);
+
+        allTypes.TryGetValue("Ice", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Dragon
+        type = null;
+        atkStrengths = new PokeType[1];
+        atkWeaknesses = new PokeType[1];
+        defStrengths = new PokeType[4];
+        defWeaknesses = new PokeType[3];
+
+        allTypes.TryGetValue("Dragon", out atkStrengths[0]);
+
+        allTypes.TryGetValue("Steel", out atkWeaknesses[0]);
+
+        allTypes.TryGetValue("Fire", out defStrengths[0]);
+        allTypes.TryGetValue("Water", out defStrengths[1]);
+        allTypes.TryGetValue("Grass", out defStrengths[2]);
+        allTypes.TryGetValue("Electric", out defStrengths[3]);
+
+        allTypes.TryGetValue("Ice", out defWeaknesses[0]);
+        allTypes.TryGetValue("Dragon", out defWeaknesses[1]);
+        allTypes.TryGetValue("Fairy", out defWeaknesses[2]);
+
+        allTypes.TryGetValue("Dragon", out type);
+        type.SetAtkStrengths(atkStrengths);
+        type.SetAtkWeaknesses(atkWeaknesses);
+        type.SetDefStrengths(defStrengths);
+        type.SetDefWeaknesses(defWeaknesses);
+
+
+        // Fairy
+        type = null;
+        atkStrengths = new PokeType[3];
+        atkWeaknesses = new PokeType[3];
+        defStrengths = new PokeType[3];
+        defWeaknesses = new PokeType[2];
+
+        allTypes.TryGetValue("Fighting", out atkStrengths[0]);
+        allTypes.TryGetValue("Dragon", out atkStrengths[1]);
+        allTypes.TryGetValue("Dark", out atkStrengths[2]);
+
+        allTypes.TryGetValue("Poison", out atkWeaknesses[0]);
+        allTypes.TryGetValue("Steel", out atkWeaknesses[1]);
+        allTypes.TryGetValue("Fire", out atkWeaknesses[2]);
+
+        allTypes.TryGetValue("Fighting", out defStrengths[0]);
+        allTypes.TryGetValue("Bug", out defStrengths[1]);
+        allTypes.TryGetValue("Dark", out defStrengths[2]);
+
+        allTypes.TryGetValue("Poison", out defWeaknesses[0]);
+        allTypes.TryGetValue("Steel", out defWeaknesses[1]);
+
+        allTypes.TryGetValue("Fairy", out type);
         type.SetAtkStrengths(atkStrengths);
         type.SetAtkWeaknesses(atkWeaknesses);
         type.SetDefStrengths(defStrengths);
