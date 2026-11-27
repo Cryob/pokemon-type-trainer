@@ -123,7 +123,7 @@ public class MainClass
     {
         Random rand = new Random();
 
-        int questionType = rand.Next(1, 3);
+        int questionType = rand.Next(1, 5);
 
         int randTypeNumber = rand.Next(0, 18);
 
@@ -392,7 +392,7 @@ public class MainClass
         }
         else if (questionType == 4)  // Defense Weaknesses
         {
-            questionText = "What type does is strong against the " + randomType.GetName() + " type?";
+            questionText = "What type is strong against the " + randomType.GetName() + " type?";
             PokeType answerType = randomType.GetRandDefWeakness();
 
             randAnswerChoice = rand.Next(1, 5);
