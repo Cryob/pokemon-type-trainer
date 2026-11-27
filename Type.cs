@@ -21,6 +21,118 @@ namespace CSToolsFinal
             this.defWeaknesses = null;
         }
 
+        public String GetName()
+        {
+            return name;
+        }
+
+        public String GetAtkStrengthsNames()
+        {
+            if (atkStrengths == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+
+            for (int i = 0; i < atkStrengths.Length; i++)
+            {
+                types += atkStrengths[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public String GetAtkWeaknessesNames()
+        {
+            if (atkWeaknesses == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+
+            for (int i = 0; i < atkWeaknesses.Length; i++)
+            {
+                types += atkWeaknesses[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public String GetDefStrengthsNames()
+        {
+            if (defStrengths == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+
+            for (int i = 0; i < defStrengths.Length; i++)
+            {
+                types += defStrengths[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public String GetDefWeaknessesNames()
+        {
+            if (defWeaknesses == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+            
+            for (int i = 0; i < defWeaknesses.Length; i++)
+            {
+                types += defWeaknesses[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public PokeType GetRandAtkStrength()
+        {
+            Random rand = new Random();
+
+            //if (atkStrengths == null)
+            //{
+            //    Console.WriteLine("WAIT STOP");
+            //    Console.WriteLine(name);
+            //    return null;
+            //}
+
+            return atkStrengths[rand.Next(0, atkStrengths.Length)];
+        }
+
+        public PokeType GetRandAtkWeakness()
+        {
+            Random rand = new Random();
+
+            return atkWeaknesses[rand.Next(0, atkWeaknesses.Length)];
+        }
+
+        public PokeType GetRandDefStrength()
+        {
+            Random rand = new Random();
+
+            return defStrengths[rand.Next(0, defStrengths.Length)];
+        }
+
+        public PokeType GetRandDefWeakness()
+        {
+            Random rand = new Random();
+
+            return defWeaknesses[rand.Next(0, defWeaknesses.Length)];
+        }
+
         public void SetAtkStrengths(PokeType[] strengths)
         {
             this.atkStrengths = strengths;
