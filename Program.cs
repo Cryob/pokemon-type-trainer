@@ -12,6 +12,8 @@ public class MainClass
 
         String userInput = "";
 
+        int highscore = -1;
+
         while (true)
         {
             // Main Menu Loop
@@ -21,6 +23,13 @@ public class MainClass
                 Console.WriteLine("Select an option:");
                 Console.WriteLine("1) Play");
                 Console.WriteLine("2) Exit");
+                Console.WriteLine();
+
+                if (highscore != -1)
+                {
+                    Console.WriteLine("Highscore: " + highscore);
+                    Console.WriteLine();
+                }
 
                 userInput = Console.ReadLine();
 
@@ -90,6 +99,8 @@ public class MainClass
             Console.WriteLine("End of Quiz!");
             Console.WriteLine("You scored: " + score + " / 10");
             Console.WriteLine("Click to go back to main menu...");
+            
+            if (score > highscore) { highscore = score; }
 
             Console.ReadKey(true);
             Console.Clear();
