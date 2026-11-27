@@ -14,6 +14,15 @@ public class MainClass
 
         int highscore = -1;
 
+        try
+        {
+            String stringHighscore = File.ReadAllText("highscore.txt");
+            highscore = int.Parse(stringHighscore);
+        } catch (FileNotFoundException e)
+        {
+            
+        }
+
         while (true)
         {
             // Main Menu Loop
@@ -43,6 +52,9 @@ public class MainClass
 
             if (userInput == "2") // Exit Game
             {
+                WriteHighscoreToFile(highscore);
+                Console.WriteLine("Highscore saved to file!");
+                Console.WriteLine("Thanks for playing!");
                 return;
             }
 
@@ -1037,5 +1049,11 @@ public class MainClass
         type.SetAtkWeaknesses(atkWeaknesses);
         type.SetDefStrengths(defStrengths);
         type.SetDefWeaknesses(defWeaknesses);
+    }
+
+    public static void WriteHighscoreToFile(int highscore)
+    {
+        String path = "highscore.txt";
+        File.WriteAllText(path, highscore.ToString());
     }
 }
