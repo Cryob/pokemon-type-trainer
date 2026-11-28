@@ -14,6 +14,8 @@ public class MainClass
 
         int highscore = -1;
 
+        int gamemode = 0;
+
         try
         {
             String stringHighscore = File.ReadAllText("highscore.txt");
@@ -59,6 +61,28 @@ public class MainClass
             }
 
             userInput = "";
+            Console.Clear();
+
+            while (userInput == "")
+            {
+                Console.WriteLine("Select a game mode");
+                Console.WriteLine("1) Individual Types");
+                Console.WriteLine("2) Individual Pokemon");
+
+                userInput = Console.ReadLine();
+
+                if (userInput != "1" && userInput != "2")
+                {
+                    userInput = "";
+                    Console.Clear();
+                    Console.WriteLine("Invalid Option\n");
+                }
+            }
+
+            if (userInput == "2") { gamemode = 1; }
+            else { gamemode = 0; }
+
+            userInput = "";
 
             // Play Game Loop
 
@@ -66,7 +90,6 @@ public class MainClass
 
             int questionNumber = 1;
             int score = 0;
-            //String correctAnswer = "1";
             
             while (questionNumber <= 10)
             {
