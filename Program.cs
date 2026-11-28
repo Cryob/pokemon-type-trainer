@@ -1284,6 +1284,29 @@ public class MainClass
         allPokemon.TryAdd("Pikachu", new Pokemon("Pikachu", allTypes["Electric"]));
         allPokemon.TryAdd("Golem", new Pokemon("Golem", allTypes["Rock"], allTypes["Ground"]));
         allPokemon.TryAdd("Lapras", new Pokemon("Lapras", allTypes["Water"], allTypes["Ice"]));
+        allPokemon.TryAdd("Aerodactyl", new Pokemon("Aerodactyl", allTypes["Rock"], allTypes["Flying"]));
+        allPokemon.TryAdd("Articuno", new Pokemon("Articuno", allTypes["Ice"], allTypes["Flying"]));
+        allPokemon.TryAdd("Zapdos", new Pokemon("Zapdos", allTypes["Electric"], allTypes["Flying"]));
+        allPokemon.TryAdd("Moltres", new Pokemon("Moltres", allTypes["Fire"], allTypes["Flying"]));
+        allPokemon.TryAdd("Honchkrow", new Pokemon("Honchkrow", allTypes["Dark"], allTypes["Flying"]));
+        allPokemon.TryAdd("Tyranitar", new Pokemon("Tyranitar", allTypes["Rock"], allTypes["Dark"]));
+        allPokemon.TryAdd("Flaafy", new Pokemon("Flaafy", allTypes["Electric"]));
+        allPokemon.TryAdd("Magcargo", new Pokemon("Magcargo", allTypes["Fire"], allTypes["Rock"]));
+        allPokemon.TryAdd("Piloswine", new Pokemon("Piloswine", allTypes["Ice"], allTypes["Ground"]));
+        allPokemon.TryAdd("Abomasnow", new Pokemon("Abomasnow", allTypes["Grass"], allTypes["Ice"]));
+        allPokemon.TryAdd("Metagross", new Pokemon("Metagross", allTypes["Steel"], allTypes["Psychic"]));
+        allPokemon.TryAdd("Alcremie", new Pokemon("Alcremie", allTypes["Fairy"]));
+        allPokemon.TryAdd("Dialga", new Pokemon("Dialga", allTypes["Steel"], allTypes["Dragon"]));
+        allPokemon.TryAdd("Palkia", new Pokemon("Palkia", allTypes["Water"], allTypes["Dragon"]));
+        allPokemon.TryAdd("Ludicolo", new Pokemon("Ludicolo", allTypes["Water"], allTypes["Grass"]));
+        allPokemon.TryAdd("Gardevoir", new Pokemon("Gardevoir", allTypes["Psychic"], allTypes["Fairy"]));
+        allPokemon.TryAdd("Gallade", new Pokemon("Gallade", allTypes["Psychic"], allTypes["Fighting"]));
+        allPokemon.TryAdd("Salamence", new Pokemon("Salamence", allTypes["Dragon"], allTypes["Flying"]));
+        allPokemon.TryAdd("Poltchageist", new Pokemon("Poltchageist", allTypes["Grass"], allTypes["Ghost"]));
+        allPokemon.TryAdd("Gengar", new Pokemon("Gengar", allTypes["Ghost"], allTypes["Poison"]));
+        allPokemon.TryAdd("Gothitelle", new Pokemon("Gothitelle", allTypes["Psychic"]));
+        allPokemon.TryAdd("Incineroar", new Pokemon("Incineroar", allTypes["Fire"], allTypes["Dark"]));
+        allPokemon.TryAdd("Annihilape", new Pokemon("Annihilape", allTypes["Fighting"], allTypes["Ghost"]));
     }
 
 }
