@@ -1231,7 +1231,7 @@ public class MainClass
 
         allTypes.TryGetValue("Fighting", out defWeaknesses[0]);
         allTypes.TryGetValue("Bug", out defWeaknesses[1]);
-        allTypes.TryGetValue("Fairy", out defWeaknesses[1]);
+        allTypes.TryGetValue("Fairy", out defWeaknesses[2]);
 
         allTypes.TryGetValue("Dark", out type);
         type.SetAtkStrengths(atkStrengths);
