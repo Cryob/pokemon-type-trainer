@@ -95,7 +95,10 @@ public class MainClass
             
             while (questionNumber <= 10)
             {
-                Question question = GenerateQuestion();
+                Question question;
+
+                if (gamemode == 0) { question = GenerateTypeQuestion(); }
+                else { question = GeneratePokemonQuestion(); }
 
                 while (userInput == "")
                 {
@@ -144,15 +147,15 @@ public class MainClass
         }
     }
 
-    public static Question GenerateQuestion()
+    public static Question GenerateTypeQuestion()
     {
         Random rand = new Random();
 
         int questionType = rand.Next(1, 5);
 
-        int randTypeNumber = rand.Next(0, 18);
+        //int randTypeNumber = rand.Next(0, 18);
 
-        PokeType randomType = allTypes.ElementAt(randTypeNumber).Value;
+        PokeType randomType = allTypes.ElementAt(rand.Next(0, 18)).Value;
 
         String questionText = "";
 
@@ -497,6 +500,196 @@ public class MainClass
                 {
                     answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
                 } while (answer4 == answer3 || answer3 == answer2 || answer3 == answer1 || randomType.GetDefWeaknessesNames().Contains(answer3));
+            }
+        }
+
+        return new Question(questionText, randAnswerChoice.ToString(), answer1, answer2, answer3, answer4);
+    }
+
+    public static Question GeneratePokemonQuestion()
+    {
+        Random rand = new Random();
+
+        int questionType = rand.Next(1, 3);
+
+        Pokemon randomPokemon = allPokemon.ElementAt(rand.Next(0, allPokemon.Count)).Value;
+
+        String questionText = "";
+
+        String answer1 = "";
+        String answer2 = "";
+        String answer3 = "";
+        String answer4 = "";
+
+        int randAnswerChoice = 1;
+
+        if (questionType == 1)  // Defense Strengths
+        {
+            questionText = "What type does " + randomPokemon.GetName() + " resist?";
+
+            PokeType answerType = randomPokemon.GetRandDefStrength();
+
+            randAnswerChoice = rand.Next(1, 5);
+
+            if (randAnswerChoice == 1)
+            {
+                answer1 = answerType.GetName();
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer2 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer2));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer3));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer4));
+            }
+            else if (randAnswerChoice == 2)
+            {
+                answer2 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer2 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer1));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer3));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer4));
+            }
+            else if (randAnswerChoice == 3)
+            {
+                answer3 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer1));
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer2 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer2));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer4));
+            }
+            else
+            {
+                answer4 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer1));
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer2 || answer2 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer2));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefStrengthsNames().Contains(answer3));
+            }
+        }
+        else  // Defense Weaknesses
+        {
+            questionText = "What type is strong against " + randomPokemon.GetName() + "?";
+            PokeType answerType = randomPokemon.GetRandDefWeakness();
+
+            randAnswerChoice = rand.Next(1, 5);
+
+            if (randAnswerChoice == 1)
+            {
+                answer1 = answerType.GetName();
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer2 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer2));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer3));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer4));
+            }
+            else if (randAnswerChoice == 2)
+            {
+                answer2 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer2 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer1));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer3));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer4));
+            }
+            else if (randAnswerChoice == 3)
+            {
+                answer3 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer1));
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer3 == answer2 || answer2 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer2));
+
+                do
+                {
+                    answer4 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer4 == answer2 || answer4 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer4));
+            }
+            else
+            {
+                answer4 = answerType.GetName();
+
+                do
+                {
+                    answer1 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer1));
+
+                do
+                {
+                    answer2 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer2 || answer2 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer2));
+
+                do
+                {
+                    answer3 = allTypes.ElementAt(rand.Next(0, 18)).Value.GetName();
+                } while (answer4 == answer3 || answer3 == answer2 || answer3 == answer1 || randomPokemon.GetDefWeaknessesNames().Contains(answer3));
             }
         }
 

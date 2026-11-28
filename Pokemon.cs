@@ -107,5 +107,60 @@ namespace CSToolsFinal
             return this.defWeaknesses;
         }
 
+        public PokeType GetRandDefStrength()
+        {
+            Random rand = new Random();
+
+            return defStrengths[rand.Next(0, defStrengths.Length)];
+        }
+
+        public PokeType GetRandDefWeakness()
+        {
+            Random rand = new Random();
+
+            return defWeaknesses[rand.Next(0, defWeaknesses.Length)];
+        }
+
+        public String GetDefStrengthsNames()
+        {
+            if (defStrengths == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+
+            for (int i = 0; i < defStrengths.Length; i++)
+            {
+                types += defStrengths[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public String GetDefWeaknessesNames()
+        {
+            if (defWeaknesses == null)
+            {
+                return "None";
+            }
+
+            String types = "";
+
+            for (int i = 0; i < defWeaknesses.Length; i++)
+            {
+                types += defWeaknesses[i].GetName();
+                types += ",";
+            }
+
+            return types;
+        }
+
+        public String GetName()
+        {
+            return this.name;
+        }
+
     }
 }
