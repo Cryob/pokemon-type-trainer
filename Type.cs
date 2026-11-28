@@ -153,5 +153,25 @@ namespace CSToolsFinal
             this.defWeaknesses = weaknesses;
         }
 
+        public PokeType[] GetAtkStrengths()
+        {
+            return this.atkStrengths;
+        }
+
+        public PokeType[] GetAtkWeaknesses()
+        {
+            return this.atkWeaknesses;
+        }
+
+        public PokeType[] GetDefStrengths()
+        {
+            return this.defStrengths;
+        }
+
+        public PokeType[] GetDefWeaknesses()
+        {
+            return this.defWeaknesses;
+        }
+
     }
 }

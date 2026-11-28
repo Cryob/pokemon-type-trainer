@@ -5,10 +5,12 @@ public class MainClass
 {
 
     public static Dictionary<String, PokeType> allTypes = new Dictionary<String, PokeType>();
+    public static Dictionary<String, Pokemon> allPokemon = new Dictionary<String, Pokemon>();
 
     public static void Main(string[] args)
     {
         SetUpTypes();
+        SetUpPokemon();
 
         String userInput = "";
 
@@ -1079,4 +1081,16 @@ public class MainClass
         String path = "highscore.txt";
         File.WriteAllText(path, highscore.ToString());
     }
+
+    public static void SetUpPokemon()
+    {
+        allPokemon.TryAdd("Charizard", new Pokemon("Charizard", allTypes["Fire"], allTypes["Flying"]));
+        allPokemon.TryAdd("Blastoise", new Pokemon("Blastoise", allTypes["Water"]));
+        allPokemon.TryAdd("Venusaur", new Pokemon("Venusaur", allTypes["Grass"], allTypes["Poison"]));
+        allPokemon.TryAdd("Butterfree", new Pokemon("Butterfree", allTypes["Bug"], allTypes["Flying"]));
+        allPokemon.TryAdd("Pikachu", new Pokemon("Pikachu", allTypes["Electric"]));
+        allPokemon.TryAdd("Golem", new Pokemon("Golem", allTypes["Rock"], allTypes["Ground"]));
+        allPokemon.TryAdd("Lapras", new Pokemon("Lapras", allTypes["Water"], allTypes["Ice"]));
+    }
+
 }
